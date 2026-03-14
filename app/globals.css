@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+  background:
+    radial-gradient(circle at 8% 2%, rgba(111, 73, 255, 0.15), transparent 32%),
+    radial-gradient(circle at 92% 12%, rgba(49, 105, 255, 0.16), transparent 30%),
+    linear-gradient(180deg, #f8fbff 0%, #f2f8ff 65%, #eef6ff 100%);
+  min-height: 100vh;
+  line-height: 1.55;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+.section-panel {
+  @apply rounded-3xl border border-blue-100/70 bg-white/90 p-6 shadow-panel backdrop-blur-sm md:p-10;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.section-panel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 45px rgba(23, 70, 191, 0.16);
+}
+
+.lume-grid {
+  background-image:
+    linear-gradient(rgba(49, 105, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(49, 105, 255, 0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+a,
+button {
+  transition: all 200ms ease;
+}
