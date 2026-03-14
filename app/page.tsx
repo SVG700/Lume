@@ -4,6 +4,8 @@ import { Header } from "./components/Header";
 import { ProfileCard } from "./components/ProfileCard";
 import { SectionHeading } from "./components/SectionHeading";
 
+const assetBasePath = process.env.NODE_ENV === "production" ? "/Lume" : "";
+
 const surveyOptions = [
   { label: "LED Marking", votes: 33, accent: "from-blue-500 to-indigo-500" },
   { label: "Dual Side USB", votes: 14, accent: "from-cyan-500 to-blue-500" },
@@ -14,7 +16,7 @@ const team = [
   {
     name: "Samhith V Gupta",
     role: "Product Lead & Research Coordinator",
-    imageUrl: "samhith.png",
+    imageUrl: `${assetBasePath}/samhith.png`,
   },
   {
     name: "C. Parthiv",
