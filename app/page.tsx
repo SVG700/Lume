@@ -14,7 +14,7 @@ const team = [
   {
     name: "Samhith V Gupta",
     role: "Product Lead & Research Coordinator",
-    imageUrl: "/samhith.png",
+    imageUrl: "samhith.png",
   },
   {
     name: "C. Parthiv",
