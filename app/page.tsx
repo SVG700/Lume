@@ -21,22 +21,22 @@ const team = [
   {
     name: "C. Parthiv",
     role: "UX Research & User Testing",
-    imageUrl: "https://placehold.co/160x160/e8f1ff/27408f?text=CP",
+    imageUrl: `${assetBasePath}/parthiv.jpeg`,
   },
   {
     name: "P. Panedra Gupta",
     role: "Product Design & Prototyping",
-    imageUrl: "https://placehold.co/160x160/e8f1ff/27408f?text=PG",
+    imageUrl: `${assetBasePath}/panedra.jpeg`,
   },
   {
-    name: "Abrar",
+    name: "Abrar Shariff",
     role: "Technology & Implementation",
-    imageUrl: "https://placehold.co/160x160/e8f1ff/27408f?text=AB",
+    imageUrl: `${assetBasePath}/Abrar.png`,
   },
   {
-    name: "Farhan",
+    name: "Muhammad Farhan",
     role: "Survey Analysis & Documentation",
-    imageUrl: "https://placehold.co/160x160/e8f1ff/27408f?text=FA",
+    imageUrl: `${assetBasePath}/Farhan.jpeg`,
   },
 ];
 
