@@ -4,7 +4,7 @@ import { Header } from "./components/Header";
 import { ProfileCard } from "./components/ProfileCard";
 import { SectionHeading } from "./components/SectionHeading";
 
-const assetBasePath = process.env.NODE_ENV === "production" ? "/Lume" : "";
+const assetBasePath = process.env.GITHUB_ACTIONS === "true" ? "/Lume" : "";
 
 const surveyOptions = [
   { label: "LED Marking", votes: 33, accent: "from-blue-500 to-indigo-500" },
