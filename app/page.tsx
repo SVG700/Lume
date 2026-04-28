@@ -3,6 +3,7 @@ import { GetLumeSection } from "./components/GetLumeSection";
 import { Header } from "./components/Header";
 import { ProfileCard } from "./components/ProfileCard";
 import { SectionHeading } from "./components/SectionHeading";
+import { Reveal } from "./components/Reveal";
 
 const assetBasePath = process.env.GITHUB_ACTIONS === "true" ? "/Lume" : "";
 
@@ -24,7 +25,7 @@ const team = [
     imageUrl: `${assetBasePath}/parthiv.jpeg`,
   },
   {
-    name: "P. Panedra Gupta",
+    name: "P. Panendra Gupta",
     role: "Product Design & Prototyping",
     imageUrl: `${assetBasePath}/panedra.jpeg`,
   },
@@ -168,142 +169,156 @@ export default function Home() {
         <div className="pointer-events-none absolute -left-24 top-24 h-56 w-56 rounded-full bg-violet-300/25 blur-3xl" />
         <div className="pointer-events-none absolute -right-24 top-[38rem] h-72 w-72 rounded-full bg-blue-300/25 blur-3xl" />
 
-        <section className="relative mx-auto flex min-h-screen w-full max-w-6xl items-center px-4 pb-14 pt-20 sm:px-6 lg:px-8">
-          <div className="grid w-full items-center gap-12 lg:grid-cols-[1.06fr_0.94fr]">
-            <div className="space-y-7 animate-fadeUp">
-              <p className="inline-flex items-center gap-2 rounded-full border border-blue-200/90 bg-white px-4 py-1 text-sm font-semibold text-blue-700 shadow-sm">
-                <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                Design Thinking Product Innovation
-              </p>
-              <h1 className="text-5xl font-bold tracking-tight text-ink sm:text-6xl md:text-7xl">
-                LUME
-                <span className="block bg-gradient-to-r from-electric to-violet bg-clip-text text-3xl text-transparent sm:text-4xl md:text-5xl">
-                  Never Flip Your USB Again.
-                </span>
-              </h1>
-              <p className="max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
-                A concept product designed to make USB insertion intuitive with LED-guided orientation,
-                transforming a daily frustration into a smooth, confident interaction.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="#why-lume"
-                  className="rounded-xl bg-gradient-to-r from-electric to-violet px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-300/50 transition duration-300 hover:-translate-y-0.5 hover:shadow-xl"
-                >
-                  Explore LUME
-                </a>
-                <a
-                  href="#feedback"
-                  className="rounded-xl border border-indigo-200 bg-white px-6 py-3 text-sm font-semibold text-indigo-700 transition duration-300 hover:-translate-y-0.5 hover:border-indigo-300 hover:bg-indigo-50"
-                >
-                  Take Survey
-                </a>
-              </div>
-              <div className="grid max-w-2xl gap-3 sm:grid-cols-3">
-                <div className="rounded-xl border border-blue-100 bg-white/90 p-4 shadow-sm">
-                  <p className="text-2xl font-bold text-ink">52</p>
-                  <p className="text-xs uppercase tracking-[0.14em] text-slate-500">Students Surveyed</p>
-                </div>
-                <div className="rounded-xl border border-blue-100 bg-white/90 p-4 shadow-sm">
-                  <p className="text-2xl font-bold text-ink">63%</p>
-                  <p className="text-xs uppercase tracking-[0.14em] text-slate-500">Preferred LED</p>
-                </div>
-                <div className="rounded-xl border border-blue-100 bg-white/90 p-4 shadow-sm">
-                  <p className="text-2xl font-bold text-ink">1st</p>
-                  <p className="text-xs uppercase tracking-[0.14em] text-slate-500">Prototype Iteration</p>
-                </div>
-              </div>
-            </div>
+        <section id="home" className="relative min-h-screen w-full">
+          <div className="absolute inset-0 -z-10 overflow-hidden">
+            <video
+              className="hero-video"
+              src={`${assetBasePath}/video/hero.mp4`}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70" />
+          </div>
 
-            <div className="animate-fadeUp rounded-[2rem] border border-blue-100/80 bg-white/90 p-6 shadow-panel backdrop-blur-sm [animation-delay:0.12s]">
-              <div className="relative overflow-hidden rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-100 via-white to-violet-100 p-8">
-                <div className="absolute -left-10 top-4 h-28 w-28 rounded-full bg-blue-300/30 blur-2xl" />
-                <div className="absolute -right-8 bottom-4 h-32 w-32 rounded-full bg-violet-300/30 blur-2xl" />
-                <div className="relative mx-auto flex h-64 w-full max-w-xs items-center justify-center rounded-2xl border-4 border-slate-800 bg-slate-900 shadow-2xl">
-                  <div className="relative h-28 w-40 rounded-xl bg-slate-100 p-4">
-                    <div className="absolute left-4 top-5 h-4 w-16 rounded bg-slate-300" />
-                    <div className="absolute right-4 top-5 h-4 w-14 rounded bg-slate-300" />
-                    <div className="absolute bottom-6 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full bg-blue-500 shadow-lg shadow-blue-400/60 animate-pulseSoft" />
-                    <div className="absolute -bottom-2 left-1/2 h-4 w-14 -translate-x-1/2 rounded-b-lg bg-slate-300" />
+          <div className="mx-auto flex h-screen max-w-6xl items-center px-4 sm:px-6 lg:px-8">
+            <div className="w-full">
+              <div className="max-w-3xl space-y-6">
+                <p className="inline-flex items-center gap-3 rounded-full bg-slate-800/30 px-4 py-1 text-xs font-semibold text-slate-300 backdrop-blur-sm">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-md" />
+                  Design Thinking Product Innovation
+                </p>
+
+                <h1 className="text-6xl leading-tight font-extrabold tracking-tight text-white drop-shadow-[0_20px_60px_rgba(59,130,246,0.12)] sm:text-7xl md:text-8xl">
+                  <span className="block glow-neon">LUME</span>
+                  <span className="mt-2 block text-2xl font-semibold text-slate-300">Never Flip Your USB Again</span>
+                </h1>
+
+                <p className="text-lg max-w-2xl text-slate-300">
+                  A smart LED-guided USB that eliminates orientation confusion — fast, intuitive, and accessible for everyone.
+                </p>
+
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="#why-lume"
+                    className="rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_40px_rgba(79,70,229,0.18)] transition-transform hover:-translate-y-1"
+                  >
+                    Explore LUME
+                  </a>
+                  <a
+                    href="#feedback"
+                    className="rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-800/30"
+                  >
+                    Take Survey
+                  </a>
+                </div>
+
+                <div className="mt-8 grid w-full max-w-md grid-cols-3 gap-3">
+                  <div className="rounded-xl glass-card p-4 text-center">
+                    <p className="text-2xl font-bold">52</p>
+                    <p className="text-xs uppercase tracking-[0.14em] text-slate-400">Users Surveyed</p>
+                  </div>
+                  <div className="rounded-xl glass-card p-4 text-center">
+                    <p className="text-2xl font-bold">63%</p>
+                    <p className="text-xs uppercase tracking-[0.14em] text-slate-400">Preferred LED</p>
+                  </div>
+                  <div className="rounded-xl glass-card p-4 text-center">
+                    <p className="text-2xl font-bold">1st</p>
+                    <p className="text-xs uppercase tracking-[0.14em] text-slate-400">Prototype Iteration</p>
                   </div>
                 </div>
-                <p className="mt-6 text-center text-sm font-medium text-slate-600">
-                  Hero Product Placeholder - LED USB Prototype
-                </p>
               </div>
             </div>
+          </div>
+
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+            <a href="#why-lume" aria-label="Scroll" className="animate-bounce rounded-full bg-slate-800/40 p-3 text-slate-200 backdrop-blur-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
           </div>
         </section>
 
         <section id="why-lume" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 lg:px-8">
-          <div className="section-panel animate-fadeUp">
+          <Reveal className="section-panel">
             <SectionHeading
               eyebrow="Why LUME Exists"
               title="A small interaction problem with a huge cumulative impact"
-              description="LUME exists to solve one of the most repeated micro-frictions in digital life: USB orientation confusion."
+              description="Millions of daily insertions are interrupted by orientation confusion — LUME turns that small frustration into a reliable, fast interaction."
             />
-            <div className="mt-7 grid gap-4 md:grid-cols-3">
+
+            <div className="mt-7 grid gap-6 md:grid-cols-3">
               {whyCards.map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md"
+                  className="rounded-2xl p-5 transition hover:scale-[1.02] hover:shadow-[0_18px_60px_rgba(79,70,229,0.08)] glass-card"
                 >
                   <IconBadge path={item.icon} />
-                  <p className="mt-4 text-lg font-semibold text-ink">{item.title}</p>
-                  <p className="mt-2 text-sm text-slate-600">{item.text}</p>
+                  <p className="mt-4 text-lg font-semibold text-white">{item.title}</p>
+                  <p className="mt-2 text-sm text-slate-300">{item.text}</p>
                 </article>
               ))}
             </div>
-          </div>
+          </Reveal>
         </section>
 
         <section id="how-lume-works" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 lg:px-8">
-          <div className="section-panel animate-fadeUp [animation-delay:0.06s]">
+          <Reveal className="section-panel" delay={60}>
             <SectionHeading
               eyebrow="How LUME Works"
               title="A simple three-step orientation experience"
-              description="Designed around fast comprehension and one-try insertion."
+              description="Fast comprehension, clear LED guidance, and confident first-try insertion."
             />
-            <div className="mt-7 grid gap-4 md:grid-cols-3">
-              {howSteps.map((step, index) => (
-                <article
-                  key={step.title}
-                  className="rounded-2xl border border-indigo-100 bg-gradient-to-br from-indigo-50 via-white to-blue-50 p-5"
-                >
-                  <div className="flex items-center justify-between">
-                    <IconBadge path={step.icon} />
-                    <span className="text-xs font-bold uppercase tracking-[0.16em] text-indigo-500">
-                      Step {index + 1}
-                    </span>
+
+            <div className="mt-8 flex items-center justify-between gap-6">
+              <div className="flex w-full items-center gap-6">
+                {howSteps.map((step, index) => (
+                  <div key={step.title} className="flex w-1/3 flex-col items-center text-center">
+                    <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-violet-500 text-white shadow-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
+                        <path d={step.icon} strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                    <span className="mt-4 text-sm font-bold text-slate-200">Step {index + 1}</span>
+                    <h3 className="mt-2 text-lg font-semibold text-white">{step.title}</h3>
+                    <p className="mt-1 text-sm text-slate-300">{step.text}</p>
                   </div>
-                  <h3 className="mt-4 text-xl font-semibold text-ink">{step.title}</h3>
-                  <p className="mt-2 text-sm text-slate-600">{step.text}</p>
-                </article>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          </Reveal>
         </section>
 
         <section id="features" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 lg:px-8">
-          <div className="section-panel animate-fadeUp [animation-delay:0.1s]">
+          <Reveal className="section-panel" delay={100}>
             <SectionHeading
               eyebrow="Key Features"
               title="Built for speed, clarity, and usability"
               description="LUME combines simple physical design cues with visible orientation guidance for a smoother USB experience."
             />
-            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {keyFeatures.map((feature) => (
                 <article
                   key={feature.title}
-                  className="rounded-xl border border-blue-100 bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md"
+                  className="rounded-xl p-5 transition hover:scale-[1.03] glass-card"
                 >
-                  <IconBadge path={feature.icon} />
-                  <p className="mt-3 text-sm font-semibold text-slate-800">{feature.title}</p>
-                  <p className="mt-2 text-xs text-slate-600">{feature.text}</p>
+                  <div className="inline-flex items-center gap-3">
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-violet-500 text-white shadow-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-5 w-5">
+                        <path d={feature.icon} strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-white">{feature.title}</p>
+                      <p className="mt-1 text-xs text-slate-300">{feature.text}</p>
+                    </div>
+                  </div>
                 </article>
               ))}
             </div>
-          </div>
+          </Reveal>
         </section>
 
         <section id="prototype" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 lg:px-8">
@@ -313,31 +328,43 @@ export default function Home() {
               title="A familiar USB form, redesigned for orientation clarity"
               description="The LED USB prototype demonstrates how a small guidance layer can eliminate repeated flipping."
             />
-            <div className="mt-6 grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-              <div className="rounded-2xl border border-indigo-100 bg-gradient-to-br from-indigo-50 via-white to-blue-100 p-6">
-                <div className="mx-auto flex h-56 w-full max-w-sm items-center justify-center rounded-2xl bg-slate-900 shadow-2xl">
-                  <div className="relative h-24 w-44 rounded-xl bg-slate-100">
-                    <div className="absolute left-5 top-4 h-3 w-14 rounded bg-slate-300" />
-                    <div className="absolute right-5 top-4 h-3 w-14 rounded bg-slate-300" />
-                    <div className="absolute bottom-5 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full bg-blue-500 shadow-lg shadow-blue-500/60 animate-pulseSoft" />
+
+            <div className="mt-6 grid items-center gap-8 lg:grid-cols-[1fr_1fr]">
+              <div className="rounded-2xl flex items-center justify-center p-6 glass-card">
+                <div className="relative mx-auto h-64 w-full max-w-sm rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-800 p-6 shadow-2xl">
+                  <div className="relative mx-auto flex h-56 w-full items-center justify-center">
+                    <div className="relative h-28 w-48 rounded-xl bg-gradient-to-br from-slate-700 to-slate-800 p-4">
+                      <div className="absolute left-6 top-6 h-3 w-16 rounded bg-slate-600/40" />
+                      <div className="absolute right-6 top-6 h-3 w-14 rounded bg-slate-600/40" />
+                      <div className="absolute bottom-8 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full bg-blue-500 shadow-lg animate-pulseSoft" />
+                    </div>
                   </div>
                 </div>
-                <p className="mt-4 text-center text-sm text-slate-600">LUME Concept Prototype Placeholder</p>
               </div>
-              <ul className="space-y-3">
-                {conceptHighlights.map((point) => (
-                  <li key={point} className="flex items-start gap-3 rounded-xl border border-blue-100 bg-white p-4">
-                    <IconBadge path="M5 12.5 10 17l9-10" />
-                    <span className="text-sm font-medium text-slate-700">{point}</span>
-                  </li>
-                ))}
-              </ul>
+
+              <div>
+                <ul className="space-y-3">
+                  {conceptHighlights.map((point) => (
+                    <li key={point} className="flex items-start gap-3 rounded-xl p-4 glass-card">
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-violet-500 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-4 w-4">
+                          <path d="M5 12.5 10 17l9-10" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                      <div>
+                        <p className="text-sm font-semibold text-white">{point}</p>
+                        <p className="mt-1 text-xs text-slate-300">Designed to be simple, low-cost and highly visible in real-world use.</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
         <section id="research" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 lg:px-8">
-          <div className="section-panel animate-fadeUp [animation-delay:0.14s]">
+          <Reveal className="section-panel" delay={140}>
             <SectionHeading
               eyebrow="Research & Validation"
               title="Survey-backed concept selection"
@@ -349,14 +376,14 @@ export default function Home() {
                 {surveyOptions.map((option) => {
                   const percentage = Math.round((option.votes / totalResponses) * 100);
                   return (
-                    <div key={option.label} className="space-y-2 rounded-xl border border-blue-100 bg-white p-4 shadow-sm">
-                      <div className="flex items-center justify-between text-sm font-semibold text-slate-700">
+                    <div key={option.label} className="space-y-2 rounded-xl p-4 glass-card">
+                      <div className="flex items-center justify-between text-sm font-semibold text-slate-200">
                         <span>{option.label}</span>
                         <span>
                           {option.votes} votes ({percentage}%)
                         </span>
                       </div>
-                      <div className="h-3.5 w-full overflow-hidden rounded-full bg-slate-100">
+                      <div className="h-3.5 w-full overflow-hidden rounded-full bg-slate-800">
                         <div
                           className={`h-full rounded-full bg-gradient-to-r ${option.accent}`}
                           style={{ width: `${percentage}%` }}
@@ -367,27 +394,27 @@ export default function Home() {
                 })}
               </div>
 
-              <aside className="rounded-2xl border border-indigo-100 bg-gradient-to-br from-indigo-50 to-blue-50 p-6 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-700">Result Highlight</p>
-                <p className="mt-3 text-2xl font-bold text-ink">LED Marking Wins</p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+              <aside className="rounded-2xl p-6 glass-card">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">Result Highlight</p>
+                <p className="mt-3 text-2xl font-bold text-white">LED Marking Wins</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">
                   LED Marking was selected as the lead concept and shaped the first LUME prototype direction.
                 </p>
                 <a
                   href={googleFormUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-electric to-violet px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5"
+                  className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5"
                 >
                   Open Google Form Survey
                 </a>
               </aside>
             </div>
-          </div>
+          </Reveal>
         </section>
 
         <section id="why-led-guidance" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 lg:px-8">
-          <div className="section-panel animate-fadeUp [animation-delay:0.2s]">
+          <Reveal className="section-panel" delay={200}>
             <SectionHeading
               eyebrow="Why LED Guidance?"
               title="Why LED was selected over other concepts"
@@ -442,7 +469,7 @@ export default function Home() {
                 })}
               </div>
             </div>
-          </div>
+          </Reveal>
         </section>
 
         <GetLumeSection />
@@ -458,7 +485,7 @@ export default function Home() {
                 imageAlt="Mentor profile placeholder"
                 centered
                 size="large"
-                className="max-w-2xl border-violet-100 bg-white/95 p-10 shadow-panel"
+                className="max-w-2xl border-violet-100 bg-transparent p-10 shadow-panel"
               />
             </div>
           </div>
@@ -467,7 +494,8 @@ export default function Home() {
         <section id="team" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 pb-10 pt-7 sm:px-6 lg:px-8">
           <div className="section-panel animate-fadeUp [animation-delay:0.32s]">
             <SectionHeading eyebrow="Meet the Team" title="The Minds Behind LUME" />
-            <div className="mt-10 space-y-6">
+
+            <div className="mt-10">
               <div className="flex justify-center">
                 <ProfileCard
                   name={team[0].name}
@@ -477,10 +505,11 @@ export default function Home() {
                   className="w-full max-w-xl"
                   imagePositionClass="object-[50%_20%]"
                   centered
+                  size="large"
                 />
               </div>
 
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="mt-8 grid gap-6 md:grid-cols-2">
                 <ProfileCard
                   name={team[1].name}
                   role={team[1].role}
@@ -497,7 +526,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="mt-6 grid gap-6 md:grid-cols-2">
                 <ProfileCard
                   name={team[3].name}
                   role={team[3].role}
@@ -518,13 +547,14 @@ export default function Home() {
         </section>
 
         <section id="feedback" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 pb-10 pt-7 sm:px-6 lg:px-8">
-          <div className="section-panel animate-fadeUp [animation-delay:0.36s]">
+          <Reveal className="section-panel" delay={360}>
             <SectionHeading
               eyebrow="Feedback / Survey"
-              title="Help shape the next version of LUME"
+              title="Help Shape the Future of USB Design"
               description="Share your thoughts on the concept and usability direction through the feedback form below."
             />
-            <div className="mx-auto mt-8 w-full max-w-4xl overflow-hidden rounded-2xl border border-blue-100 bg-white p-2 shadow-sm sm:p-3">
+
+            <div className="mx-auto mt-8 w-full max-w-4xl overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 p-2 shadow-sm sm:p-3">
               <iframe
                 src={googleFormEmbedUrl}
                 title="LUME Feedback Form"
@@ -534,7 +564,7 @@ export default function Home() {
                 Loading...
               </iframe>
             </div>
-          </div>
+          </Reveal>
         </section>
 
       </main>

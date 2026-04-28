@@ -26,17 +26,17 @@ export function ProfileCard({
 
   return (
     <article
-      className={`group rounded-3xl border border-blue-100 bg-gradient-to-br from-white via-blue-50/70 to-violet-50/60 p-7 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:shadow-panel ${minimumHeight} ${
+      className={`group rounded-3xl p-7 transition duration-300 hover:-translate-y-1.5 ${minimumHeight} ${
         centered ? "mx-auto max-w-sm text-center" : ""
-      } ${className}`}
+      } ${className} glass-card`}
     >
       <img
         src={imageUrl}
         alt={imageAlt}
-        className={`mx-auto rounded-full border-2 border-white object-cover shadow ring-4 ring-blue-100/70 transition duration-300 group-hover:ring-indigo-200 ${imageSize} ${imagePositionClass}`}
+        className={`mx-auto rounded-full border-2 border-white/10 object-cover shadow-lg ring-4 ring-slate-800/40 transition duration-300 group-hover:ring-indigo-200 ${imageSize} ${imagePositionClass}`}
       />
-      <p className={`mt-5 font-semibold text-ink ${titleSize}`}>{name}</p>
-      <p className={`mt-2 whitespace-pre-line leading-relaxed text-slate-600 ${roleSize}`}>{role}</p>
+      <p className={`mt-5 font-semibold text-white ${titleSize}`}>{name}</p>
+      <p className={`mt-2 whitespace-pre-line leading-relaxed text-slate-300 ${roleSize}`}>{role}</p>
     </article>
   );
 }

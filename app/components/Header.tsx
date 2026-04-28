@@ -20,6 +20,7 @@ const navItems: NavItem[] = [
 export function Header() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("#home");
+  const [scrolled, setScrolled] = useState(false);
 
   const sectionIds = useMemo(
     () => navItems.map((item) => item.href.replace("#", "")),
@@ -43,6 +44,7 @@ export function Header() {
       }
 
       setActive(`#${current}`);
+      setScrolled(window.scrollY > 24);
     };
 
     onScroll();
@@ -51,13 +53,17 @@ export function Header() {
   }, [sectionIds]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/70 bg-white/75 shadow-[0_8px_28px_rgba(32,66,158,0.12)] backdrop-blur-xl">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "border-b border-slate-800 bg-slate-900/60 backdrop-blur-xl shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <a href="#home" className="group inline-flex items-center gap-2 text-xl font-bold tracking-tight text-ink">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-electric to-violet text-sm font-extrabold text-white shadow-lg shadow-blue-300/40">
-            L
-          </span>
-          <span>LUME</span>
+        <a href="#home" className="group inline-flex items-center gap-3 text-2xl font-extrabold tracking-tight text-white">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-violet-400 drop-shadow-[0_8px_24px_rgba(99,102,241,0.15)]">LUME</span>
+          <span className="ml-1 hidden text-sm font-medium text-slate-300 md:block">Never Flip Your USB</span>
         </a>
 
         <div className="hidden items-center gap-3 md:flex">
