@@ -380,9 +380,9 @@ export default function Home() {
                   const percentage = Math.round((option.votes / totalResponses) * 100);
                   return (
                     <div key={option.label} className="space-y-2 rounded-xl p-4 glass-card">
-                      <div className="flex items-center justify-between text-sm font-semibold text-slate-200">
-                        <span>{option.label}</span>
-                        <span>
+                      <div className="flex flex-col gap-2 text-sm font-semibold text-slate-200 sm:flex-row sm:items-center sm:justify-between">
+                        <span className="break-words pr-2">{option.label}</span>
+                        <span className="text-xs font-medium text-slate-300 sm:text-sm">
                           {option.votes} votes ({percentage}%)
                         </span>
                       </div>
@@ -444,16 +444,16 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mt-8 rounded-2xl p-5 glass-card">
+            <div className="mt-8 rounded-2xl p-5 sm:p-6 glass-card">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">Survey Result Visualization</p>
               <div className="mt-5 space-y-4">
                 {guidanceComparison.map((item) => {
                   const percentage = Math.round((item.votes / totalResponses) * 100);
                   return (
                     <div key={item.name}>
-                      <div className="mb-2 flex items-center justify-between text-sm font-medium text-slate-200">
-                        <span>{item.name}</span>
-                        <span>
+                      <div className="mb-2 flex flex-col gap-1 text-sm font-medium text-slate-200 sm:flex-row sm:items-center sm:justify-between">
+                        <span className="break-words pr-2">{item.name}</span>
+                        <span className="text-xs text-slate-300 sm:text-sm">
                           {item.votes} votes ({percentage}%)
                         </span>
                       </div>

@@ -19,14 +19,14 @@ export function ProfileCard({
   size = "default",
   imagePositionClass = "object-center",
 }: ProfileCardProps) {
-  const imageSize = size === "large" ? "h-24 w-24" : "h-20 w-20";
-  const titleSize = size === "large" ? "text-3xl" : "text-xl";
-  const roleSize = size === "large" ? "text-lg" : "text-base";
-  const minimumHeight = size === "large" ? "min-h-[320px]" : "min-h-[250px]";
+  const imageSize = size === "large" ? "h-24 w-24 sm:h-28 sm:w-28" : "h-20 w-20 sm:h-24 sm:w-24";
+  const titleSize = size === "large" ? "text-2xl sm:text-3xl" : "text-lg sm:text-xl";
+  const roleSize = size === "large" ? "text-sm sm:text-lg" : "text-sm sm:text-base";
+  const minimumHeight = size === "large" ? "min-h-[300px] sm:min-h-[320px]" : "min-h-[220px] sm:min-h-[250px]";
 
   return (
     <article
-      className={`group rounded-3xl p-7 transition duration-300 hover:-translate-y-1.5 ${minimumHeight} ${
+      className={`group rounded-3xl p-5 sm:p-7 transition duration-300 hover:-translate-y-1.5 ${minimumHeight} ${
         centered ? "mx-auto max-w-sm text-center" : ""
       } ${className} glass-card`}
     >
