@@ -193,7 +193,7 @@ export default function Home() {
 
                 <h1 className="max-w-2xl text-4xl font-extrabold leading-tight tracking-tight text-white drop-shadow-[0_20px_60px_rgba(59,130,246,0.12)] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
                   <span className="block glow-neon">LUME</span>
-                  <span className="mt-2 block text-lg font-semibold text-slate-300 sm:text-xl md:text-2xl">Never Flip Your USB Again</span>
+                  <span className="mt-4 block text-lg font-semibold text-slate-300 sm:text-xl md:text-2xl">Never Flip Your USB Again</span>
                 </h1>
 
                 <p className="max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base md:text-lg">
