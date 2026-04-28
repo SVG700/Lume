@@ -60,14 +60,14 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <a href="#home" className="group inline-flex items-center gap-3 text-2xl font-extrabold tracking-tight text-white">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+        <a href="#home" className="group inline-flex items-center gap-3 text-xl font-extrabold tracking-tight text-white sm:text-2xl">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-violet-400 drop-shadow-[0_8px_24px_rgba(99,102,241,0.15)]">LUME</span>
           <span className="ml-1 hidden text-sm font-medium text-slate-300 md:block">Never Flip Your USB</span>
         </a>
 
         <div className="hidden items-center gap-3 md:flex">
-          <nav className="flex items-center gap-2 rounded-full border border-blue-100/80 bg-white/80 px-2 py-1">
+          <nav className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-2 py-1 backdrop-blur-sm">
             {navItems.map((item) => (
               <a
                 key={item.label}
@@ -75,7 +75,7 @@ export function Header() {
                 className={`rounded-full px-3 py-1.5 text-sm font-medium transition ${
                   active === item.href
                     ? "bg-blue-600 text-white shadow-md"
-                    : "text-slate-600 hover:bg-blue-50 hover:text-electric"
+                    : "text-slate-200 hover:bg-white/10 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -85,7 +85,7 @@ export function Header() {
 
           <a
             href="#feedback"
-            className="rounded-xl bg-gradient-to-r from-electric to-violet px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-300/50 transition hover:-translate-y-0.5 hover:shadow-xl"
+            className="rounded-xl bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-300/50 transition hover:-translate-y-0.5 hover:shadow-xl"
           >
             Take Survey
           </a>
@@ -94,7 +94,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setOpen((current) => !current)}
-          className="inline-flex items-center justify-center rounded-lg border border-blue-100 bg-white/90 p-2 text-slate-700 shadow-sm md:hidden"
+          className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/5 p-2 text-slate-100 shadow-sm backdrop-blur-md md:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
         >
@@ -117,17 +117,17 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-blue-100 bg-white/95 px-4 py-4 backdrop-blur-md md:hidden">
-          <nav className="flex flex-col gap-3">
+        <div className="absolute inset-x-0 top-full border-b border-white/10 bg-slate-950/95 px-4 py-4 backdrop-blur-xl md:hidden">
+          <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 sm:px-2 md:px-8">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className={`rounded-lg px-2 py-1.5 text-sm font-medium transition ${
+                className={`w-full rounded-xl px-3 py-3 text-sm font-medium transition ${
                   active === item.href
                     ? "bg-blue-600 text-white"
-                    : "text-slate-700 hover:bg-blue-50 hover:text-electric"
+                    : "text-slate-200 hover:bg-white/10 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -136,11 +136,11 @@ export function Header() {
             <a
               href="#feedback"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex w-fit rounded-xl bg-gradient-to-r from-electric to-violet px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-300/50 transition hover:-translate-y-0.5"
+              className="mt-2 inline-flex w-full justify-center rounded-xl bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-300/50 transition hover:-translate-y-0.5"
             >
               Take Survey
             </a>
-          </nav>
+          </div>
         </div>
       ) : null}
     </header>

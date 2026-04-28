@@ -1,9 +1,10 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { useEffect, useRef } from "react";
 
 type RevealProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   threshold?: number;
   rootMargin?: string;
@@ -37,9 +38,5 @@ export function Reveal({ children, className = "", threshold = 0.12, rootMargin 
     return () => observer.disconnect();
   }, [delay, threshold, rootMargin]);
 
-  return (
-    <div ref={ref} className={`reveal ${className}`}> 
-      {children}
-    </div>
-  );
+  return <div ref={ref} className={`reveal ${className}`}>{children}</div>;
 }

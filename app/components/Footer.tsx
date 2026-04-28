@@ -11,8 +11,8 @@ export function Footer() {
 
   return (
     <footer className="mt-20 bg-gradient-to-b from-slate-950 via-slate-900 to-black text-slate-200">
-      <div className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <section>
             <p className="text-2xl font-extrabold tracking-tight text-white">LUME</p>
             <p className="mt-2 text-sm font-medium text-blue-300">Never Flip Your USB Again.</p>
@@ -52,10 +52,7 @@ export function Footer() {
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
               Help us improve LUME by sharing your feedback.
             </p>
-            <a
-              href="#feedback"
-              className="mt-5 inline-flex rounded-xl bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/20 transition hover:-translate-y-0.5 hover:shadow-xl"
-            >
+            <a href="#feedback" className="mt-5 inline-flex rounded-xl bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/20 transition hover:-translate-y-0.5 hover:shadow-xl">
               Take Survey
             </a>
           </section>

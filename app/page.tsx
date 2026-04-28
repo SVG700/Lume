@@ -164,12 +164,12 @@ export default function Home() {
     <>
       <Header />
 
-      <main id="home" className="relative overflow-x-clip pt-16">
+      <main id="home" className="relative overflow-x-clip pt-16 sm:pt-20 md:pt-24 lg:pt-28 xl:pt-32">
         <div className="pointer-events-none absolute inset-0 lume-grid opacity-25" />
         <div className="pointer-events-none absolute -left-24 top-24 h-56 w-56 rounded-full bg-violet-300/25 blur-3xl" />
         <div className="pointer-events-none absolute -right-24 top-[38rem] h-72 w-72 rounded-full bg-blue-300/25 blur-3xl" />
 
-        <section id="home" className="relative min-h-screen w-full">
+        <section id="home" className="relative min-h-[100svh] w-full">
           <div className="absolute inset-0 -z-10 overflow-hidden">
             <video
               className="hero-video"
@@ -182,39 +182,39 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70" />
           </div>
 
-          <div className="mx-auto flex h-screen max-w-6xl items-center px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto flex min-h-[100svh] max-w-6xl items-center px-4 py-24 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <div className="w-full">
-              <div className="max-w-3xl space-y-6">
+              <div className="max-w-3xl space-y-5 sm:space-y-6">
                 <p className="inline-flex items-center gap-3 rounded-full bg-slate-800/30 px-4 py-1 text-xs font-semibold text-slate-300 backdrop-blur-sm">
                   <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-md" />
                   Design Thinking Product Innovation
                 </p>
 
-                <h1 className="text-6xl leading-tight font-extrabold tracking-tight text-white drop-shadow-[0_20px_60px_rgba(59,130,246,0.12)] sm:text-7xl md:text-8xl">
+                <h1 className="max-w-2xl text-4xl font-extrabold leading-tight tracking-tight text-white drop-shadow-[0_20px_60px_rgba(59,130,246,0.12)] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
                   <span className="block glow-neon">LUME</span>
-                  <span className="mt-2 block text-2xl font-semibold text-slate-300">Never Flip Your USB Again</span>
+                  <span className="mt-2 block text-lg font-semibold text-slate-300 sm:text-xl md:text-2xl">Never Flip Your USB Again</span>
                 </h1>
 
-                <p className="text-lg max-w-2xl text-slate-300">
+                <p className="max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base md:text-lg">
                   A smart LED-guided USB that eliminates orientation confusion — fast, intuitive, and accessible for everyone.
                 </p>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <a
                     href="#why-lume"
-                    className="rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_40px_rgba(79,70,229,0.18)] transition-transform hover:-translate-y-1"
+                    className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_40px_rgba(79,70,229,0.18)] transition-transform hover:-translate-y-1 sm:w-auto"
                   >
                     Explore LUME
                   </a>
                   <a
                     href="#feedback"
-                    className="rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-800/30"
+                    className="inline-flex w-full items-center justify-center rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-800/30 sm:w-auto"
                   >
                     Take Survey
                   </a>
                 </div>
 
-                <div className="mt-8 grid w-full max-w-md grid-cols-3 gap-3">
+                <div className="mt-8 grid w-full max-w-md grid-cols-1 gap-3 sm:grid-cols-3">
                   <div className="rounded-xl glass-card p-4 text-center">
                     <p className="text-2xl font-bold">52</p>
                     <p className="text-xs uppercase tracking-[0.14em] text-slate-400">Users Surveyed</p>
@@ -241,7 +241,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="why-lume" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 lg:px-8">
+        <section id="why-lume" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <Reveal className="section-panel">
             <SectionHeading
               eyebrow="Why LUME Exists"
@@ -249,7 +249,7 @@ export default function Home() {
               description="Millions of daily insertions are interrupted by orientation confusion — LUME turns that small frustration into a reliable, fast interaction."
             />
 
-            <div className="mt-7 grid gap-6 md:grid-cols-3">
+            <div className="mt-7 grid grid-cols-1 gap-6 md:grid-cols-3">
               {whyCards.map((item) => (
                 <article
                   key={item.title}
@@ -264,7 +264,7 @@ export default function Home() {
           </Reveal>
         </section>
 
-        <section id="how-lume-works" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 lg:px-8">
+        <section id="how-lume-works" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <Reveal className="section-panel" delay={60}>
             <SectionHeading
               eyebrow="How LUME Works"
@@ -272,10 +272,10 @@ export default function Home() {
               description="Fast comprehension, clear LED guidance, and confident first-try insertion."
             />
 
-            <div className="mt-8 flex items-center justify-between gap-6">
-              <div className="flex w-full items-center gap-6">
+            <div className="mt-8 flex flex-col gap-4 md:flex-row md:items-stretch md:gap-6">
+              <div className="flex w-full flex-col gap-4 md:flex-row md:items-stretch md:gap-6">
                 {howSteps.map((step, index) => (
-                  <div key={step.title} className="flex w-1/3 flex-col items-center text-center">
+                  <div key={step.title} className="flex w-full flex-col items-center text-center md:w-1/3">
                     <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-violet-500 text-white shadow-lg">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-6 w-6">
                         <path d={step.icon} strokeLinecap="round" strokeLinejoin="round" />
@@ -284,6 +284,9 @@ export default function Home() {
                     <span className="mt-4 text-sm font-bold text-slate-200">Step {index + 1}</span>
                     <h3 className="mt-2 text-lg font-semibold text-white">{step.title}</h3>
                     <p className="mt-1 text-sm text-slate-300">{step.text}</p>
+                    {index < howSteps.length - 1 ? (
+                      <div className="mt-5 hidden h-px w-24 bg-gradient-to-r from-blue-400/50 to-violet-400/50 md:block" />
+                    ) : null}
                   </div>
                 ))}
               </div>
@@ -291,14 +294,14 @@ export default function Home() {
           </Reveal>
         </section>
 
-        <section id="features" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 lg:px-8">
+        <section id="features" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <Reveal className="section-panel" delay={100}>
             <SectionHeading
               eyebrow="Key Features"
               title="Built for speed, clarity, and usability"
               description="LUME combines simple physical design cues with visible orientation guidance for a smoother USB experience."
             />
-            <div className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-7 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
               {keyFeatures.map((feature) => (
                 <article
                   key={feature.title}
@@ -321,7 +324,7 @@ export default function Home() {
           </Reveal>
         </section>
 
-        <section id="prototype" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 lg:px-8">
+        <section id="prototype" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="section-panel animate-fadeUp [animation-delay:0.14s]">
             <SectionHeading
               eyebrow="LUME Prototype"
@@ -330,10 +333,10 @@ export default function Home() {
             />
 
             <div className="mt-6 grid items-center gap-8 lg:grid-cols-[1fr_1fr]">
-              <div className="rounded-2xl flex items-center justify-center p-6 glass-card">
-                <div className="relative mx-auto h-64 w-full max-w-sm rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-800 p-6 shadow-2xl">
-                  <div className="relative mx-auto flex h-56 w-full items-center justify-center">
-                    <div className="relative h-28 w-48 rounded-xl bg-gradient-to-br from-slate-700 to-slate-800 p-4">
+              <div className="flex items-center justify-center rounded-2xl p-4 sm:p-6 glass-card">
+                <div className="relative mx-auto h-56 w-full max-w-sm rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-800 p-4 shadow-2xl sm:h-64 sm:p-6">
+                  <div className="relative mx-auto flex h-48 w-full items-center justify-center sm:h-56">
+                    <div className="relative h-24 w-40 rounded-xl bg-gradient-to-br from-slate-700 to-slate-800 p-4 sm:h-28 sm:w-48">
                       <div className="absolute left-6 top-6 h-3 w-16 rounded bg-slate-600/40" />
                       <div className="absolute right-6 top-6 h-3 w-14 rounded bg-slate-600/40" />
                       <div className="absolute bottom-8 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full bg-blue-500 shadow-lg animate-pulseSoft" />
@@ -363,7 +366,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="research" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 lg:px-8">
+        <section id="research" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <Reveal className="section-panel" delay={140}>
             <SectionHeading
               eyebrow="Research & Validation"
@@ -413,7 +416,7 @@ export default function Home() {
           </Reveal>
         </section>
 
-        <section id="why-led-guidance" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 lg:px-8">
+        <section id="why-led-guidance" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <Reveal className="section-panel" delay={200}>
             <SectionHeading
               eyebrow="Why LED Guidance?"
@@ -421,44 +424,40 @@ export default function Home() {
               description="Three concept directions were evaluated through user preference data and product feasibility considerations."
             />
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
               {guidanceComparison.map((item) => (
                 <article
                   key={item.name}
-                  className={`rounded-2xl border bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md ${
-                    item.chosen
-                      ? "border-blue-300 ring-2 ring-blue-100"
-                      : "border-blue-100"
-                  }`}
+                  className={`rounded-2xl p-5 transition duration-300 hover:-translate-y-1 hover:shadow-md glass-card ${item.chosen ? "ring-2 ring-blue-500/20" : ""}`}
                 >
                   <div className="flex items-center justify-between">
-                    <p className="text-lg font-semibold text-ink">{item.name}</p>
+                    <p className="text-lg font-semibold text-white">{item.name}</p>
                     {item.chosen ? (
-                      <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-blue-700">
+                      <span className="rounded-full bg-blue-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-blue-200">
                         Chosen
                       </span>
                     ) : null}
                   </div>
-                  <p className="mt-3 text-sm text-slate-600">{item.note}</p>
-                  <p className="mt-4 text-sm font-semibold text-slate-700">{item.votes} votes</p>
+                  <p className="mt-3 text-sm text-slate-300">{item.note}</p>
+                  <p className="mt-4 text-sm font-semibold text-slate-200">{item.votes} votes</p>
                 </article>
               ))}
             </div>
 
-            <div className="mt-8 rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-700">Survey Result Visualization</p>
+            <div className="mt-8 rounded-2xl p-5 glass-card">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">Survey Result Visualization</p>
               <div className="mt-5 space-y-4">
                 {guidanceComparison.map((item) => {
                   const percentage = Math.round((item.votes / totalResponses) * 100);
                   return (
                     <div key={item.name}>
-                      <div className="mb-2 flex items-center justify-between text-sm font-medium text-slate-700">
+                      <div className="mb-2 flex items-center justify-between text-sm font-medium text-slate-200">
                         <span>{item.name}</span>
                         <span>
                           {item.votes} votes ({percentage}%)
                         </span>
                       </div>
-                      <div className="h-3.5 w-full overflow-hidden rounded-full bg-slate-100">
+                      <div className="h-3.5 w-full overflow-hidden rounded-full bg-slate-800">
                         <div
                           className={`h-full rounded-full bg-gradient-to-r ${item.accent}`}
                           style={{ width: `${percentage}%` }}
@@ -474,10 +473,10 @@ export default function Home() {
 
         <GetLumeSection />
 
-        <section id="mentor" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 lg:px-8">
-          <div className="section-panel animate-fadeUp [animation-delay:0.28s]">
+        <section id="mentor" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          <Reveal className="section-panel" delay={280}>
             <SectionHeading eyebrow="Project Mentor" title="Guided by design leadership" />
-            <div className="mt-8 rounded-3xl border border-violet-200 bg-gradient-to-br from-violet-50 via-white to-blue-50 p-3 shadow-sm">
+            <div className="mt-8 rounded-3xl border border-violet-200 bg-gradient-to-br from-violet-50 via-white to-blue-50 p-3 shadow-sm sm:p-4 md:p-5">
               <ProfileCard
                 name={mentor.name}
                 role={mentor.role}
@@ -485,68 +484,68 @@ export default function Home() {
                 imageAlt="Mentor profile placeholder"
                 centered
                 size="large"
-                className="max-w-2xl border-violet-100 bg-transparent p-10 shadow-panel"
+                className="max-w-2xl border-violet-100 bg-transparent p-6 sm:p-8 md:p-10 shadow-panel"
               />
             </div>
-          </div>
+          </Reveal>
         </section>
 
-        <section id="team" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 pb-10 pt-7 sm:px-6 lg:px-8">
-          <div className="section-panel animate-fadeUp [animation-delay:0.32s]">
+        <section id="team" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 pb-10 pt-7 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          <Reveal className="section-panel" delay={320}>
             <SectionHeading eyebrow="Meet the Team" title="The Minds Behind LUME" />
 
-            <div className="mt-10">
+            <div className="mt-10 space-y-6 sm:space-y-8">
               <div className="flex justify-center">
                 <ProfileCard
                   name={team[0].name}
                   role={team[0].role}
                   imageUrl={team[0].imageUrl}
                   imageAlt={`${team[0].name} profile placeholder`}
-                  className="w-full max-w-xl"
+                  className="w-full max-w-md sm:max-w-lg md:max-w-xl"
                   imagePositionClass="object-[50%_20%]"
                   centered
                   size="large"
                 />
               </div>
 
-              <div className="mt-8 grid gap-6 md:grid-cols-2">
+              <div className="grid grid-cols-1 justify-items-center gap-6 md:grid-cols-2 md:justify-items-stretch">
                 <ProfileCard
                   name={team[1].name}
                   role={team[1].role}
                   imageUrl={team[1].imageUrl}
                   imageAlt={`${team[1].name} profile placeholder`}
-                  className="w-full"
+                  className="w-full max-w-md md:max-w-none"
                 />
                 <ProfileCard
                   name={team[2].name}
                   role={team[2].role}
                   imageUrl={team[2].imageUrl}
                   imageAlt={`${team[2].name} profile placeholder`}
-                  className="w-full"
+                  className="w-full max-w-md md:max-w-none"
                 />
               </div>
 
-              <div className="mt-6 grid gap-6 md:grid-cols-2">
+              <div className="grid grid-cols-1 justify-items-center gap-6 md:grid-cols-2 md:justify-items-stretch">
                 <ProfileCard
                   name={team[3].name}
                   role={team[3].role}
                   imageUrl={team[3].imageUrl}
                   imageAlt={`${team[3].name} profile placeholder`}
-                  className="w-full"
+                  className="w-full max-w-md md:max-w-none"
                 />
                 <ProfileCard
                   name={team[4].name}
                   role={team[4].role}
                   imageUrl={team[4].imageUrl}
                   imageAlt={`${team[4].name} profile placeholder`}
-                  className="w-full"
+                  className="w-full max-w-md md:max-w-none"
                 />
               </div>
             </div>
-          </div>
+          </Reveal>
         </section>
 
-        <section id="feedback" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 pb-10 pt-7 sm:px-6 lg:px-8">
+        <section id="feedback" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 pb-10 pt-7 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <Reveal className="section-panel" delay={360}>
             <SectionHeading
               eyebrow="Feedback / Survey"
@@ -555,12 +554,7 @@ export default function Home() {
             />
 
             <div className="mx-auto mt-8 w-full max-w-4xl overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 p-2 shadow-sm sm:p-3">
-              <iframe
-                src={googleFormEmbedUrl}
-                title="LUME Feedback Form"
-                className="h-[560px] w-full rounded-xl sm:h-[620px]"
-                loading="lazy"
-              >
+              <iframe src={googleFormEmbedUrl} title="LUME Feedback Form" className="h-[520px] w-full rounded-xl sm:h-[600px] md:h-[640px]" loading="lazy">
                 Loading...
               </iframe>
             </div>
