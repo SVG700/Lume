@@ -60,3 +60,21 @@ button {
 /* Smooth section reveal placeholder */
 .reveal { transform: translateY(12px); opacity: 0; transition: transform 520ms cubic-bezier(.2,.9,.2,1), opacity 520ms ease; }
 .reveal.visible { transform: none; opacity: 1; }
+
+/* Enhanced hero section text visibility */
+#home h1 { 
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.8),
+    0 4px 8px rgba(0, 0, 0, 0.7),
+    0 8px 16px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(99, 102, 241, 0.25);
+}
+
+#home .glow-neon {
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 4px 12px rgba(0, 0, 0, 0.8),
+    0 8px 20px rgba(99, 102, 241, 0.4),
+    0 0 30px rgba(99, 102, 241, 0.3);
+  font-weight: 900;
+}
