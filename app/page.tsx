@@ -5,8 +5,8 @@ import { ProfileCard } from "./components/ProfileCard";
 import { SectionHeading } from "./components/SectionHeading";
 import { Reveal } from "./components/Reveal";
 
-// Always use /Lume for static assets when deployed to GitHub Pages
-const assetBasePath = "/Lume";
+// For Vercel deployment, no base path prefix needed
+const assetBasePath = "";
 
 const surveyOptions = [
   { label: "LED Marking", votes: 33, accent: "from-blue-500 to-indigo-500" },
