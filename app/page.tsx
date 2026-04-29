@@ -181,6 +181,7 @@ export default function Home() {
               playsInline
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70" />
+            <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           </div>
 
           <div className="mx-auto flex min-h-[100svh] max-w-6xl items-center px-4 py-24 sm:px-6 md:px-8 lg:px-12 xl:px-16">
@@ -215,18 +216,18 @@ export default function Home() {
                   </a>
                 </div>
 
-                <div className="mt-8 grid w-full max-w-md grid-cols-1 gap-3 sm:grid-cols-3">
-                  <div className="rounded-xl glass-card p-4 text-center">
-                    <p className="text-2xl font-bold">52</p>
-                    <p className="text-xs uppercase tracking-[0.14em] text-slate-400">Users Surveyed</p>
+                <div className="mt-8 grid w-full max-w-2xl grid-cols-1 gap-6 sm:grid-cols-3 rounded-xl p-6 sm:p-8" style={{background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(8px)'}}>
+                  <div className="text-center">
+                    <p className="text-5xl sm:text-6xl font-bold text-white" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>52</p>
+                    <p className="mt-3 text-xs uppercase tracking-[0.14em] text-slate-100 font-medium" style={{textShadow: '0 1px 2px rgba(0,0,0,0.8)'}}>Users Surveyed</p>
                   </div>
-                  <div className="rounded-xl glass-card p-4 text-center">
-                    <p className="text-2xl font-bold">63%</p>
-                    <p className="text-xs uppercase tracking-[0.14em] text-slate-400">Preferred LED</p>
+                  <div className="text-center">
+                    <p className="text-5xl sm:text-6xl font-bold text-white" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>63%</p>
+                    <p className="mt-3 text-xs uppercase tracking-[0.14em] text-slate-100 font-medium" style={{textShadow: '0 1px 2px rgba(0,0,0,0.8)'}}>Preferred LED</p>
                   </div>
-                  <div className="rounded-xl glass-card p-4 text-center">
-                    <p className="text-2xl font-bold">1st</p>
-                    <p className="text-xs uppercase tracking-[0.14em] text-slate-400">Prototype Iteration</p>
+                  <div className="text-center">
+                    <p className="text-5xl sm:text-6xl font-bold text-white" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>1st</p>
+                    <p className="mt-3 text-xs uppercase tracking-[0.14em] text-slate-100 font-medium" style={{textShadow: '0 1px 2px rgba(0,0,0,0.8)'}}>Prototype Iteration</p>
                   </div>
                 </div>
               </div>
