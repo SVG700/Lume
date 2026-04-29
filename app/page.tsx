@@ -187,14 +187,6 @@ export default function Home() {
           <div className="mx-auto flex flex-col items-center justify-center min-h-[100svh] w-full max-w-6xl px-4 py-24 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <div className="w-full flex flex-col items-center">
               <div className="space-y-6 sm:space-y-8 flex flex-col items-center">
-                {/* Logo */}
-                <img 
-                  src={`${assetBasePath}/logo.png`} 
-                  alt="LUME Logo" 
-                  className="h-16 sm:h-24 w-auto object-contain" 
-                  style={{filter: 'drop-shadow(0 0 20px rgba(96, 165, 250, 0.3))'}}
-                />
-
                 {/* Badge */}
                 <p className="inline-flex items-center gap-3 rounded-full bg-slate-800/30 px-4 py-1 text-xs font-semibold text-slate-300 backdrop-blur-sm">
                   <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-md" />
@@ -383,25 +375,25 @@ export default function Home() {
 
             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
               <div className="flex flex-col items-center">
-                <div className="w-full overflow-hidden rounded-[12px] shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+                <div className="w-full overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:scale-[1.03]" style={{boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)'}}>
                   <img
                     src={`${assetBasePath}/prototype1.jpg`}
-                    alt="LUME Prototype - Front View"
+                    alt="LUME Prototype - Orientation Arrow View"
                     className="w-full h-auto object-cover"
                   />
                 </div>
-                <p className="mt-4 text-sm font-medium text-slate-300">LUME Prototype - Front View</p>
+                <p className="mt-4 text-sm text-slate-400">LUME Prototype - Orientation Arrow View</p>
               </div>
 
               <div className="flex flex-col items-center">
-                <div className="w-full overflow-hidden rounded-[12px] shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+                <div className="w-full overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:scale-[1.03]" style={{boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)'}}>
                   <img
                     src={`${assetBasePath}/prototype2.jpg`}
                     alt="LUME Prototype - LED Indicator View"
                     className="w-full h-auto object-cover"
                   />
                 </div>
-                <p className="mt-4 text-sm font-medium text-slate-300">LUME Prototype - LED Indicator View</p>
+                <p className="mt-4 text-sm text-slate-400">LUME Prototype - LED Indicator View</p>
               </div>
             </div>
           </div>
