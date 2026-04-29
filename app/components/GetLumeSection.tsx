@@ -16,18 +16,13 @@ export function GetLumeSection() {
   return (
     <section id="get-lume" className="relative mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-7 sm:px-6 md:px-8 lg:px-12 xl:px-16">
       <Reveal className="section-panel" delay={260}>
-        <div className="grid items-center gap-8 lg:grid-cols-[1fr_1fr]">
-          <div className="flex items-center justify-center rounded-3xl p-4 sm:p-6">
-            <div className="relative mx-auto h-56 w-full max-w-sm rounded-3xl bg-gradient-to-br from-slate-800 to-slate-900 p-5 shadow-2xl sm:h-64 sm:p-6">
-              <div className="relative mx-auto flex h-56 w-full items-center justify-center">
-                <div className="relative h-28 w-48 rounded-xl bg-gradient-to-br from-slate-700 to-slate-800 p-4">
-                  <div className="absolute left-6 top-6 h-3 w-16 rounded bg-slate-600/40" />
-                  <div className="absolute right-6 top-6 h-3 w-14 rounded bg-slate-600/40" />
-                  <div className="absolute bottom-8 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full bg-blue-500 shadow-lg animate-pulseSoft" />
-                </div>
-              </div>
-            </div>
-            <p className="mt-5 text-center text-sm font-medium text-slate-300">LUME USB Product Image</p>
+        <div className="grid items-stretch gap-8 lg:grid-cols-[1fr_1fr]">
+          <div className="flex self-stretch justify-center">
+            <img
+              src="/prototype2.jpg"
+              alt="LUME Prototype"
+              className="block h-full w-full rounded-2xl object-contain shadow-[0_0_20px_rgba(59,130,246,0.25)]"
+            />
           </div>
 
           <div>
