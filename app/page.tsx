@@ -342,16 +342,12 @@ export default function Home() {
             />
 
             <div className="mt-6 grid items-center gap-8 lg:grid-cols-[1fr_1fr]">
-              <div className="flex items-center justify-center rounded-2xl p-4 sm:p-6 glass-card">
-                <div className="relative mx-auto h-56 w-full max-w-sm rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-800 p-4 shadow-2xl sm:h-64 sm:p-6">
-                  <div className="relative mx-auto flex h-48 w-full items-center justify-center sm:h-56">
-                    <div className="relative h-24 w-40 rounded-xl bg-gradient-to-br from-slate-700 to-slate-800 p-4 sm:h-28 sm:w-48">
-                      <div className="absolute left-6 top-6 h-3 w-16 rounded bg-slate-600/40" />
-                      <div className="absolute right-6 top-6 h-3 w-14 rounded bg-slate-600/40" />
-                      <div className="absolute bottom-8 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full bg-blue-500 shadow-lg animate-pulseSoft" />
-                    </div>
-                  </div>
-                </div>
+              <div className="flex items-center justify-center rounded-2xl overflow-hidden">
+                <img 
+                  src="/prototype1.jpg" 
+                  alt="LUME Prototype"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
 
               <div>

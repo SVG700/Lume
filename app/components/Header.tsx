@@ -63,7 +63,6 @@ export function Header() {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <a href="#home" className="group inline-flex items-center gap-3 text-xl font-extrabold tracking-tight text-white sm:text-2xl">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-violet-400 drop-shadow-[0_8px_24px_rgba(99,102,241,0.15)]">LUME</span>
-          <span className="ml-1 hidden text-sm font-medium text-slate-300 md:block">Never Flip Your USB</span>
         </a>
 
         <div className="hidden items-center gap-3 md:flex">
