@@ -19,7 +19,7 @@ export function GetLumeSection() {
         <div className="grid items-stretch gap-8 lg:grid-cols-[1fr_1fr]">
           <div className="flex self-stretch justify-center">
             <img
-              src="/prototype2.jpg"
+              src="/prototype.jpg"
               alt="LUME Prototype"
               className="block h-full w-full rounded-2xl object-contain shadow-[0_0_20px_rgba(59,130,246,0.25)]"
             />
