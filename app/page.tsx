@@ -170,7 +170,7 @@ export default function Home() {
         <div className="pointer-events-none absolute -left-24 top-24 h-56 w-56 rounded-full bg-violet-300/25 blur-3xl" />
         <div className="pointer-events-none absolute -right-24 top-[38rem] h-72 w-72 rounded-full bg-blue-300/25 blur-3xl" />
 
-        <section id="home" className="relative min-h-[100svh] w-full">
+        <section id="home" className="relative min-h-[100svh] w-full flex flex-col items-center justify-center">
           <div className="absolute inset-0 -z-10 overflow-hidden">
             <video
               className="hero-video"
@@ -184,50 +184,65 @@ export default function Home() {
             <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           </div>
 
-          <div className="mx-auto flex min-h-[100svh] max-w-6xl items-center px-4 py-24 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-            <div className="w-full">
-              <div className="max-w-3xl space-y-5 sm:space-y-6">
+          <div className="mx-auto flex flex-col items-center justify-center min-h-[100svh] w-full max-w-6xl px-4 py-24 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+            <div className="w-full flex flex-col items-center">
+              <div className="space-y-6 sm:space-y-8 flex flex-col items-center">
+                {/* Logo */}
+                <img 
+                  src={`${assetBasePath}/logo.png`} 
+                  alt="LUME Logo" 
+                  className="h-16 sm:h-24 w-auto object-contain" 
+                  style={{filter: 'drop-shadow(0 0 20px rgba(96, 165, 250, 0.3))'}}
+                />
+
+                {/* Badge */}
                 <p className="inline-flex items-center gap-3 rounded-full bg-slate-800/30 px-4 py-1 text-xs font-semibold text-slate-300 backdrop-blur-sm">
                   <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-md" />
                   Design Thinking Product Innovation
                 </p>
 
-                <h1 className="max-w-2xl text-4xl font-extrabold leading-tight tracking-tight text-white drop-shadow-[0_20px_60px_rgba(59,130,246,0.12)] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+                {/* Title */}
+                <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white drop-shadow-[0_20px_60px_rgba(59,130,246,0.12)] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center">
                   <span className="block glow-neon">LUME</span>
-                  <span className="mt-4 block text-lg font-semibold text-slate-300 sm:text-xl md:text-2xl">Never Flip Your USB Again</span>
                 </h1>
 
-                <p className="max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base md:text-lg">
+                {/* Tagline */}
+                <p className="text-lg sm:text-xl md:text-2xl font-semibold text-slate-100 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>Never Flip Your USB Again</p>
+
+                {/* Description */}
+                <p className="max-w-2xl text-sm leading-relaxed text-slate-200 sm:text-base md:text-lg text-center">
                   A smart LED-guided USB that eliminates orientation confusion — fast, intuitive, and accessible for everyone.
                 </p>
 
-                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                {/* CTA Buttons */}
+                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap justify-center">
                   <a
                     href="#why-lume"
-                    className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_40px_rgba(79,70,229,0.18)] transition-transform hover:-translate-y-1 sm:w-auto"
+                    className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_40px_rgba(79,70,229,0.18)] transition-transform hover:-translate-y-1 sm:w-auto"
                   >
                     Explore LUME
                   </a>
                   <a
                     href="#feedback"
-                    className="inline-flex w-full items-center justify-center rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-800/30 sm:w-auto"
+                    className="inline-flex items-center justify-center rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-200 hover:bg-slate-800/30 sm:w-auto"
                   >
                     Take Survey
                   </a>
                 </div>
 
-                <div className="mt-8 grid w-full max-w-2xl grid-cols-1 gap-6 sm:grid-cols-3 rounded-xl p-6 sm:p-8" style={{background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(8px)'}}>
+                {/* Stats Row */}
+                <div className="mt-12 w-full max-w-2xl grid grid-cols-1 gap-6 sm:grid-cols-3 rounded-2xl px-8 py-4" style={{background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(12px)'}}>
                   <div className="text-center">
-                    <p className="text-5xl sm:text-6xl font-bold text-white" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>52</p>
-                    <p className="mt-3 text-xs uppercase tracking-[0.14em] text-slate-100 font-medium" style={{textShadow: '0 1px 2px rgba(0,0,0,0.8)'}}>Users Surveyed</p>
+                    <p className="text-4xl sm:text-5xl font-bold text-blue-400">52</p>
+                    <p className="mt-2 text-xs uppercase tracking-[0.14em] text-slate-200 font-medium">Users Surveyed</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-5xl sm:text-6xl font-bold text-white" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>63%</p>
-                    <p className="mt-3 text-xs uppercase tracking-[0.14em] text-slate-100 font-medium" style={{textShadow: '0 1px 2px rgba(0,0,0,0.8)'}}>Preferred LED</p>
+                    <p className="text-4xl sm:text-5xl font-bold text-blue-400">63%</p>
+                    <p className="mt-2 text-xs uppercase tracking-[0.14em] text-slate-200 font-medium">Preferred LED</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-5xl sm:text-6xl font-bold text-white" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>1st</p>
-                    <p className="mt-3 text-xs uppercase tracking-[0.14em] text-slate-100 font-medium" style={{textShadow: '0 1px 2px rgba(0,0,0,0.8)'}}>Prototype Iteration</p>
+                    <p className="text-4xl sm:text-5xl font-bold text-blue-400">1st</p>
+                    <p className="mt-2 text-xs uppercase tracking-[0.14em] text-slate-200 font-medium">Prototype Iteration</p>
                   </div>
                 </div>
               </div>
@@ -363,6 +378,30 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+
+            <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="flex flex-col items-center">
+                <div className="w-full overflow-hidden rounded-[12px] shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+                  <img
+                    src={`${assetBasePath}/prototype1.jpg`}
+                    alt="LUME Prototype - Front View"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <p className="mt-4 text-sm font-medium text-slate-300">LUME Prototype - Front View</p>
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className="w-full overflow-hidden rounded-[12px] shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+                  <img
+                    src={`${assetBasePath}/prototype2.jpg`}
+                    alt="LUME Prototype - LED Indicator View"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <p className="mt-4 text-sm font-medium text-slate-300">LUME Prototype - LED Indicator View</p>
               </div>
             </div>
           </div>
