@@ -341,56 +341,22 @@ export default function Home() {
               description="The LED USB prototype demonstrates how a small guidance layer can eliminate repeated flipping."
             />
 
-            <div className="mt-6 grid items-center gap-8 lg:grid-cols-[1fr_1fr]">
-              <div className="flex items-center justify-center rounded-2xl overflow-hidden">
-                <img 
-                  src="/prototype1.jpg" 
-                  alt="LUME Prototype"
-                  className="w-full h-full object-cover rounded-2xl"
-                />
-              </div>
-
-              <div>
-                <ul className="space-y-3">
-                  {conceptHighlights.map((point) => (
-                    <li key={point} className="flex items-start gap-3 rounded-xl p-4 glass-card">
-                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-violet-500 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-4 w-4">
-                          <path d="M5 12.5 10 17l9-10" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </span>
-                      <div>
-                        <p className="text-sm font-semibold text-white">{point}</p>
-                        <p className="mt-1 text-xs text-slate-300">Designed to be simple, low-cost and highly visible in real-world use.</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div className="flex flex-col items-center">
-                <div className="w-full overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:scale-[1.03]" style={{boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)'}}>
-                  <img
-                    src={`${assetBasePath}/prototype1.jpg`}
-                    alt="LUME Prototype - Orientation Arrow View"
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-                <p className="mt-4 text-sm text-slate-400">LUME Prototype - Orientation Arrow View</p>
-              </div>
-
-              <div className="flex flex-col items-center">
-                <div className="w-full overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:scale-[1.03]" style={{boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)'}}>
-                  <img
-                    src={`${assetBasePath}/prototype2.jpg`}
-                    alt="LUME Prototype - LED Indicator View"
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-                <p className="mt-4 text-sm text-slate-400">LUME Prototype - LED Indicator View</p>
-              </div>
+            <div className="mt-6">
+              <ul className="space-y-3">
+                {conceptHighlights.map((point) => (
+                  <li key={point} className="flex items-start gap-3 rounded-xl p-4 glass-card">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-violet-500 text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-4 w-4">
+                        <path d="M5 12.5 10 17l9-10" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-white">{point}</p>
+                      <p className="mt-1 text-xs text-slate-300">Designed to be simple, low-cost and highly visible in real-world use.</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
